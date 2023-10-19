@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="left">
+        <!-- cards begin -->
+        <div class="cards">
+          <!-- front card start -->
+          <div class="front-card">
+            <img class="front-img" src="images/bg-card-front.png" alt="front-card">
+            <div class="card-content">
+              <div class="content-1">
+                <img class="card-logo" src="images/card-logo.svg" alt="card-logo">
+              </div>
+              <div class="content-2">
+                <h1 class="card-number"> 0000 0000 0000 0000</h1>
+                <div class="card-info">
+                  <span class="name">Jane Appleseed</span>
+                  <p> <span class="month">00</span> <span>/</span> <span class="year">00</span> </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- front card ends -->
+
+          <!-- back card starts -->
+          <div class="back-card">
+            <img class="back-img" src="images/bg-card-back.png" alt="back-card">
+            <span id="cvc">000</span>
+          </div>
+          <!-- back card ends -->
+        </div>
+        <!-- cards end -->
+      </div>
+      <div class="right">
+        <!-- form starts -->
+        <form id="form" action="#" class="">
+          <!-- input field -->
+          <div class="input-box">
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" name=""   id="card-name" placeholder="e.g. Jane Appleseed">
+            <div class="error-msg"></div>
+          </div>
+          <!-- input fields -->
+
+          <!-- input field -->
+          <div class="input-box">
+            <label for="number">Card Number</label>
+            <input
+            inputmode="numeric" 
+            oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)"
+            maxlength="16"
+            minlength="16"
+            type="number" name="" id="number"  placeholder="e.g. 1234 5678 9123 0000" >
+            <div class="error-msg"></div>
+          </div>
+          <!-- input fields -->
+
+          <!-- form grid -->
+          <div class="form-grid">
+            <div class="grid-1">
+              <label for="month" style="padding-bottom:6px ;">Exp. Date (MM/YY)</label>
+              <div class="grid-inner">
+                <div class="input-box">
+                  <input type="number"
+                  inputmode="numeric"
+                  oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)"
+                  maxlength="2"
+                  minlength="2"
+              
+                   id="month" placeholder="MM">
+                  <div class="error-msg"></div>
+                </div>
+                <div class="input-box">
+                  <input type="number"
+                  inputmode="numeric" 
+                  oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)"
+                  maxlength="2"
+                  minlength="2"
+                   id="year" placeholder="YY">
+                  <div class="error-msg"></div>
+                </div>
+              </div>
+              </div>
+            <div class="grid-2">
+              <label for="cvc-no" style="padding-bottom:20px;">CVC</label>
+              <div class="input-box">
+                <input type="number"
+                inputmode="numeric" 
+                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)"
+                maxlength="3"
+                minlength="3"
+                id="cvc-no" placeholder="e.g. 123">
+                <div class="error-msg"></div>
+              </div>
+            </div>
+          </div>
+          <!-- form grid -->
+          <button class="form-btn" type="submit">Confirm</button>
+        </form>
+        <!-- form ends -->
+
+        <!--  Completed state start  -->
+        <div class="card-2 hide">
+          <img src="images/icon-complete.svg" alt="">
+          <h2>Thank you!</h2>
+          <p>We've added your card details</p>
+          <button class="card-2_btn">Continue</button>
+        </div>
+        <!--  Completed state ends  -->
+      </div>
+    </div>
+  </main> 
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="app.js"></script>
+</body>
+</html>
