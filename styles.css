@@ -94,7 +94,7 @@ li{ list-style: none;}
     justify-content: space-between ;
 }
 .card-content h1{
-    font-size: clamp( 1.2rem, 2.2vw , 3rem);
+    font-size: clamp( 1.2rem, 2.2vw , 2.3rem);
     font-weight: 300;
     color: var(--White);
     margin-bottom: 1rem;
