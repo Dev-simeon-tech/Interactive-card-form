@@ -138,7 +138,6 @@ function defaultText(){
     cardNumber.textContent = "0000 0000 0000 0000";
     cardName.textContent = "Jane Appleseed";
     cardMonth.textContent = "00";
-    yearInp.textContent = "00";
+    cardYear.textContent = "00";
     cardCvc.textContent = "000";
 }
-// console.log(inputs)

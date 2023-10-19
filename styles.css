@@ -30,13 +30,8 @@ body{
     position: relative;
     overflow-x: hidden;
 }
-h1,
-h2,
-h3{
-    font-family: 'Space Grotesk', sans-serif;
-}
-p,button,a{
-    font-family: 'Space Grotesk', sans-serif;
+body,html{
+    touch-action: pan-y;
 }
 input,
 button,
@@ -55,6 +50,7 @@ li{ list-style: none;}
 .container{
     min-height: 100vh;
 }
+
 @media(min-width:800px){
     .container{
         display: grid;
@@ -98,8 +94,9 @@ li{ list-style: none;}
     justify-content: space-between ;
 }
 .card-content h1{
-    font-size: clamp( 1.1rem, 2.2vw , 3rem);
+    font-size: clamp( 1.2rem, 2.2vw , 3rem);
     font-weight: 300;
+    color: var(--White);
     margin-bottom: 1rem;
     
 }
@@ -110,7 +107,7 @@ li{ list-style: none;}
 }
 
 .card-info  span{
-    font-size: clamp( 12px, 1.5vw, 2vw);
+    font-size: clamp( 14px, 1.5vw, 2vw);
     font-weight: 300;
 }
 
@@ -126,7 +123,7 @@ li{ list-style: none;}
     text-align: right;
     right: 10%;
     width: 100%;
-    font-size: clamp( 12px, 1.5vw, 2vw);
+    font-size: clamp( 14px, 1.5vw, 2vw);
 }
 .right{
     display: flex;
@@ -196,6 +193,7 @@ input[type="number"]::-webkit-outer-spin-button{
 }
 .error-msg{
     color: var(--Red);
+    width: 120%;
     font-size: 11px;
     height: 15px;
 }
@@ -203,10 +201,12 @@ input[type="number"]::-webkit-outer-spin-button{
 @media(max-width:800px){
     body,html{
         overflow-x: hidden;
-        height: 100vh;
+        min-height: 100vh;
     }
     .container{
         display: grid;
+        height: 100%;
+        gap: 2.5rem;
         grid-template-rows: 1.3fr 3fr;
         
     }
